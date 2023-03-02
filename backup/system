@@ -1,7 +1,7 @@
 config system
 	option ttylogin '0'
 	option urandom_seed '0'
-	option hostname 'OpenWrt'
+	option hostname 'ImmortalWrt'
 	option timezone 'CST-8'
 	option zonename 'Asia/Shanghai'
 	option log_size '64'
@@ -10,11 +10,10 @@ config system
 	option cronloglevel '9'
 
 config timeserver 'ntp'
-	option enabled '1'
-	list server 'ntp1.aliyun.com'
-	list server 'time1.cloud.tencent.com'
+	list server 'ntp.ntsc.ac.cn'
+	option use_dhcp '0'
 
 config led
 	option sysfs 'n1:white:status'
 	option trigger 'none'
-	option default '1'
+	option default '0'
